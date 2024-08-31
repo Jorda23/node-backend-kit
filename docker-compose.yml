@@ -1,0 +1,15 @@
+version: '3'
+services:
+  ts-test-db:
+    image: mariadb
+    container_name: ts-test-db
+    # volumes:
+    #   # Make database persistent
+    #   - /var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - ${MYSQL_PORT}:3306

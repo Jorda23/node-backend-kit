@@ -1,0 +1,96 @@
+{
+  "components": {
+    "schemas": {}
+  },
+  "info": {
+    "title": "",
+    "version": "1.0.0"
+  },
+  "openapi": "3.0.0",
+  "paths": {
+    "/todos/": {
+      "get": {
+        "operationId": "TodoController.getAll",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Successful response"
+          }
+        },
+        "summary": "Get all",
+        "tags": [
+          "Todo"
+        ]
+      }
+    },
+    "/photos/": {
+      "get": {
+        "operationId": "PhotoController.getAll",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Successful response"
+          }
+        },
+        "summary": "Get all",
+        "tags": [
+          "Photo"
+        ]
+      }
+    },
+    "/photos/{id}": {
+      "get": {
+        "operationId": "PhotoController.getOneById",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "pattern": "[^\\/#\\?]+?",
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Successful response"
+          }
+        },
+        "summary": "Get one by id",
+        "tags": [
+          "Photo"
+        ]
+      }
+    },
+    "/users/": {
+      "get": {
+        "operationId": "UserController.getAll",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Successful response"
+          }
+        },
+        "summary": "Get all",
+        "tags": [
+          "User"
+        ]
+      }
+    }
+  },
+  "controllers": [
+    null,
+    null,
+    null
+  ]
+}
